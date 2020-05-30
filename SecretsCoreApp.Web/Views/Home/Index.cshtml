@@ -1,0 +1,13 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Secret Management demo</h1>
+    
+    <div>
+        <h2> Api Secret: @Model.ApiKey</h2>
+        <h3>Connection string: @Model.ConnectionString</h3>
+    </div>
+</div>
