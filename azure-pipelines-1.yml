@@ -21,7 +21,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  buildConfiguration: 'Release'
+- group: AppSettings
+- name:  buildConfiguration
+  value: 'Release'
 
 steps:
     
