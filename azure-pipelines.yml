@@ -41,12 +41,12 @@ steps:
     publishWebProjects: true
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
-- task: AzureKeyVault@1
-  inputs:
-    azureSubscription: 'DevOpsDeploy'
-    KeyVaultName: 'gammaweb-secret-test'
-    SecretsFilter: '*'
-    RunAsPreJob: false
+# - task: AzureKeyVault@1
+#   inputs:
+#     azureSubscription: 'DevOpsDeploy'
+#     KeyVaultName: 'gammaweb-secret-test'
+#     SecretsFilter: '*'
+#     RunAsPreJob: false
 
 - task: AzureRmWebAppDeployment@4
   inputs:
