@@ -57,7 +57,7 @@ steps:
     appType: 'webApp'
     WebAppName: 'gw-secrets-core-webapp'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
-    AppSettings: '-KeyVault "$(KeyVault)""'
+    AppSettings: '-KeyVault "$(KeyVault)"'
 
 - task: owaspzap@1
   displayName: 'OWASP ZAP'
