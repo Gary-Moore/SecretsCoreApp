@@ -40,7 +40,6 @@ steps:
     command: 'publish'
     publishWebProjects: true
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: true
 
 - task: AzureRmWebAppDeployment@4
   inputs:
@@ -49,5 +48,3 @@ steps:
     appType: 'webApp'
     WebAppName: 'gw-secrets-core-webapp'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
-    enableCustomDeployment: true
-    DeploymentType: 'zipDeploy'
