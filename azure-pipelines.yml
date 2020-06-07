@@ -29,3 +29,8 @@ steps:
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
+
+- task: WhiteSource Bolt@20
+  displayName: 'WhiteSource Bolt'
+  inputs:
+    advance: true
