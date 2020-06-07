@@ -16,10 +16,10 @@ namespace SecretsCoreApp.Web
 
         }
 
-        public void AnotherEmptyMethod()
-        {
+        //public void AnotherEmptyMethod()
+        //{
 
-        }
+        //}
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
