@@ -34,3 +34,18 @@ steps:
   displayName: 'WhiteSource Bolt'
   inputs:
     advance: true
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: true
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'DevOpsDeploy'
+    appType: 'webApp'
+    WebAppName: 'gw-secrets-core-webapp'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
