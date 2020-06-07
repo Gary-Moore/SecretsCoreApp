@@ -50,7 +50,7 @@ steps:
   displayName: 'OWASP ZAP'
   inputs:
     aggressivemode: true
-    threshold: '150'
+    threshold: '250'
     scantype: 'targetedScan'
     url: 'https://gw-secrets-core-webapp.azurewebsites.net/'
 
