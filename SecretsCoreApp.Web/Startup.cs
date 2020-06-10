@@ -50,8 +50,9 @@ namespace SecretsCoreApp.Web
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
             app.UseSecurityHeaders();
+            app.UseStaticFiles();
+            
             app.UseRouting();
 
             app.UseAuthorization();
